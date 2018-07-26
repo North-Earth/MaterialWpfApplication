@@ -15,11 +15,16 @@ namespace MaterialWpfApplication.ViewModel
         public MainWindowViewModel()
         {
             OpenPaletteCommand = new DelegateCommand(o => OpenPalette());
+
+            OpenButtonsCommand = new DelegateCommand(o => OpenButtons());
         }
 
         #region Command
 
         public DelegateCommand OpenPaletteCommand { get; set; }
+
+        public DelegateCommand OpenButtonsCommand { get; set; }
+
 
         #endregion
 
@@ -29,6 +34,12 @@ namespace MaterialWpfApplication.ViewModel
         {
             window.mainGrid.Children.Clear();
             window.mainGrid.Children.Add(new View.Palette());
+        }
+
+        private void OpenButtons()
+        {
+            window.mainGrid.Children.Clear();
+            window.mainGrid.Children.Add(new View.Buttons());
         }
 
         #endregion

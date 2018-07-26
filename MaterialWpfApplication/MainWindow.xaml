@@ -19,6 +19,10 @@
                     <StackPanel Margin="2">
                         <Button Content="Palette" Margin="2" Command="{Binding OpenPaletteCommand}"/>
                         <Border BorderBrush="LightGray" BorderThickness="2" Margin="0,3"/>
+
+                        <Button Content="Buttons" Margin="2" Command="{Binding OpenButtonsCommand}"/>
+                        <Border BorderBrush="LightGray" BorderThickness="2" Margin="0,3"/>
+                        
                     </StackPanel>
                 </ScrollViewer>
             </Border>
